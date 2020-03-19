@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Link naar een style sheet en favicon -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="favicon.png" type="image/png" />
+
+    <!-- Link met prefetch = aleen HTML. preload = gekozen media/etc. prerender = HTML en afbeeldingen. dns-prefetch = domeinnaam -->
+    <link rel="prefetch" href="about.html" />
+    <link rel="preload" as="image" href="dog-large.jpg" />
+    <link rel="prerender" href="https://www.google.com" />
+    <link rel="dns-prefetch" href="https://www.loi.nl" />
+
+    <!-- Zoekmachine optimalisatie met relationele paginas met next en prev -->
+    <link rel="prev" href="pagina0.html" />
+    <link rel="next" href="pagina2.html" />
+
+    <title>Links en meer</title>
+  </head>
+  <body>
+    <!-- Link naar een andere pagina. En huidige als lege anchor -->
+    <nav>
+      <a>Home</a>
+      <a href="./about.html">About</a><br />
+    </nav>
+
+    <!-- Bookmark -->
+    <h1 id="heading">Heading</h1>
+    <a href="#heading">Terug naar heading</a><br />
+
+    <!-- Bookmark voor een andere pagina of website -->
+    <a href="./about.html#heading">Ga naar about heading</a><br />
+
+    <!-- Foto als link naar grotere foto -->
+    <a href="./dog-large.jpg"> <img src="./dog-small.jpg" alt="" /> </a><br />
+
+    <!-- Contact links. Mail = mail to: met ?subject een automatisch ingevuld onderwerp. Telefoon = tel: -->
+    <!-- Mail werkt alleen als het apparaat een mail-app heeft. Telefoon is handig voor Google -->
+    <a href="mail to: mijnemail@website.nl?Ik heb een vraag" rel="author"
+      >Mail ons</a
+    ><br />
+    <a href="tel: +31612345678">Bel ons</a><br />
+
+    <!-- Hele tekst als link -->
+    <a href="./about.html">
+      <div id="big-link">
+        <h1>Ga naar onze about</h1>
+        <p>Dit hele blok is een link om meer te lezen op onze about pagina</p>
+      </div> </a
+    ><br />
+
+    <!-- Links in de tekst logica -->
+    <article>
+      <h1>Links in de tekst logica</h1>
+      <p>
+        Voor meer informatie over ons kunt u terecht op onze
+        <a title="About pagina" href="./about.html">about pagina</a>. Wilt u
+        meer informatie over de richtlijnen, kijk dan op
+        <a
+          title="Digitoegankelijk"
+          target="_blank"
+          href="https://www.digitoegankelijk.nl/onderwerpen/navigatie#h5o-3"
+          >Digitoegankelijk</a
+        >
+      </p>
+    </article>
+
+    <!-- Downloads. Eerst opent in een nieuwtabblad as er een pdf extensie is. De andere is een download -->
+    <p>Lees de <a href="./pdf/h05.pdf">pdf van hoofdstuk5</a>.</p>
+    <p>
+      Download de
+      <a href="./pdf/h05.pdf" download="Hoofdstuk 5">pdf van hoofdstuk 5</a>.
+    </p>
+  </body>
+</html>
